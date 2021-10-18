@@ -1,12 +1,29 @@
 {
 	"info": {
 		"_postman_id": "ce3df351-9036-4840-a008-2e54d55c4253",
-		"name": "3",
+		"name": "HW2 @Dididi04",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "first",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {",
+							"    console.log(response.json());",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -129,8 +146,7 @@
 							"console.log(resp_family);  ",
 							"//12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)",
 							"    pm.test(\"Your salary equal\", function () {",
-							"    pm.expect(jsonData.family.u_salary_1_5_year).to.eql(jsonData.salary * 4",
-							");",
+							"    pm.expect(jsonData.family.u_salary_1_5_year).to.eql(jsonData.salary * 4);",
 							"});",
 							"",
 							"",
@@ -342,7 +358,7 @@
 							"//20. Передать в окружение ремённую переменную salary",
 							"//21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.",
 							"console.log(response_JSON.salary); ",
-							""
+							"console.log(response_JSON);"
 						],
 						"type": "text/javascript"
 					}
@@ -403,6 +419,8 @@
 							"",
 							"//7. Спарсить request.",
 							"var req = JSON.parse;",
+							"var reqData = pm.request.url.query.get(\"name\");",
+							"",
 							"//8. Проверить, что json response имеет параметр start_qa_salary",
 							"pm.test(\"Body matches start qa salary\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"start_qa_salary\");",
