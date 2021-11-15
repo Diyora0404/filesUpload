@@ -1,1 +1,13 @@
-1 
+Report number: Unique number given to the report
+Application / Module being tested
+Version & release number
+Problem Summary / Short Description / Synopsis
+Steps to reproduce
+Severity (Critical, Serious – Major / Minor / Suggestion or Cosmetic) How it affects the product? (Crash, show stopper, data loss, missing feature /  / spelling, alights, colors) Bug Severity or Defect Severity in testing is a degree of impact a bug or a Defect has on the software application under test     
+Priority (High, Medium, Low) How soon it need to be fixed Priority is defined as the order in which a defect should be fixed. Higher the priority the sooner the defect should be resolved.
+Environment (Software and/or hardware configuration)
+Reported by
+Assigned to
+Status (Open, Pending, Fixed, Closed, cannot reproduce, etc.)
+Resolution / Notes
+Keywords
